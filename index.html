@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jay Patwa — Data Scientist & Python Developer</title>
+<meta name="description" content="Portfolio of Jay Patwa — Data Scientist, Data Analyst & Python Developer based in Ahmedabad, India." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Page preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-text">
+      <span>J</span><span>A</span><span>Y</span>
+      <span class="dot">.</span>
+      <span>P</span><span>A</span><span>T</span><span>W</span><span>A</span>
+    </div>
+    <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+    <div class="preloader-meta">
+      <span>Loading portfolio</span>
+      <span id="preloaderPct">0%</span>
+    </div>
+  </div>
+</div>
+
+<!-- Custom cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"><span id="cursorLabel"></span></div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Animated mesh background -->
+<div class="mesh-bg">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="noise"></div>
+  <div class="grain"></div>
+</div>
+
+<!-- Floating dock nav -->
+<nav class="dock" id="dock">
+  <a href="#home" data-tip="Home" class="dock-item active">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>
+  </a>
+  <a href="#about" data-tip="About" class="dock-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
+  </a>
+  <a href="#skills" data-tip="Skills" class="dock-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h10M4 17h16"/></svg>
+  </a>
+  <a href="#work" data-tip="Work" class="dock-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M9 6V4h6v2"/></svg>
+  </a>
+  <a href="#timeline" data-tip="Journey" class="dock-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4v16M5 8h14M7 16h10"/></svg>
+  </a>
+  <a href="#contact" data-tip="Contact" class="dock-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6l8 7 8-7"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
+  </a>
+</nav>
+
+<!-- Top status bar -->
+<header class="topbar">
+  <a href="#home" class="brand" data-cursor="link">
+    <span class="brand-mark"></span>
+    <span class="brand-text">Jay Patwa<small>Data · Python · ML</small></span>
+  </a>
+  <div class="status">
+    <span class="status-dot"></span>
+    <span class="status-text">Open to Work · 2026</span>
+  </div>
+  <div class="topbar-meta">
+    <span id="clock">--:--</span>
+    <span class="dotsep">•</span>
+    <span>Ahmedabad, IN</span>
+  </div>
+</header>
+
+<!-- ========================= HERO ========================= -->
+<section id="home" class="hero">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-meta">
+        <span class="meta-pill">
+          <span class="pulse"></span>
+          Open to Full-Time & Internship Roles
+        </span>
+        <span class="meta-line">B.Tech · CGPA 8.5</span>
+      </div>
+
+      <h1 class="hero-headline">
+        <span class="line"><span class="word">Turning</span> <span class="word"><i>raw data</i></span></span>
+        <span class="line"><span class="word">into</span> <span class="word grad">decisions</span></span>
+        <span class="line"><span class="word">that</span> <span class="word">move</span> <span class="word">the</span> <span class="word">needle.</span></span>
+      </h1>
+
+      <p class="hero-sub">
+        I'm <strong>Jay Patwa</strong> — Data Scientist, Analyst & Python developer
+        building end-to-end pipelines, ML models, and dashboards out of Ahmedabad.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#work" class="btn-magnetic" data-cursor="view">
+          <span class="btn-bg"></span>
+          <span class="btn-label">
+            <span class="btn-text">See selected work</span>
+            <span class="btn-text">See selected work</span>
+          </span>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a href="Jay_CV.pdf" target="_blank" class="link-underline" data-cursor="open">
+          Download résumé (PDF)
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div><b>4+</b><span>Major Projects</span></div>
+        <div><b>10K+</b><span>Rows Analyzed</span></div>
+        <div><b>3</b><span>Certifications</span></div>
+        <div><b>8.5</b><span>CGPA</span></div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="portrait" data-cursor="hi">
+        <div class="portrait-frame">
+          <img src="profile.jpg" alt="Jay Patwa" />
+          <div class="portrait-overlay">
+            <span class="ov-name">Jay Patwa</span>
+            <span class="ov-role">Data Scientist · 2026</span>
+          </div>
+        </div>
+        <div class="portrait-badges">
+          <span class="badge b-py">Python</span>
+          <span class="badge b-ml">Scikit-learn</span>
+          <span class="badge b-bi">Power BI</span>
+          <span class="badge b-sql">SQL</span>
+        </div>
+      </div>
+
+      <div class="quote-card">
+        <span class="qmark">"</span>
+        <p>Data is most useful when it tells a story a stakeholder can act on the same day.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="hero-arrow">
+      <span></span><span></span><span></span>
+      <p>Scroll</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= MARQUEE STRIP ========================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Python</span><i>✦</i>
+    <span>Scikit-learn</span><i>✦</i>
+    <span>Pandas</span><i>✦</i>
+    <span>NumPy</span><i>✦</i>
+    <span>Power BI</span><i>✦</i>
+    <span>DAX</span><i>✦</i>
+    <span>SQL</span><i>✦</i>
+    <span>MongoDB</span><i>✦</i>
+    <span>MERN</span><i>✦</i>
+    <span>ESP32 · IoT</span><i>✦</i>
+    <span>EDA</span><i>✦</i>
+    <span>Statistics</span><i>✦</i>
+
+    <span>Python</span><i>✦</i>
+    <span>Scikit-learn</span><i>✦</i>
+    <span>Pandas</span><i>✦</i>
+    <span>NumPy</span><i>✦</i>
+    <span>Power BI</span><i>✦</i>
+    <span>DAX</span><i>✦</i>
+    <span>SQL</span><i>✦</i>
+    <span>MongoDB</span><i>✦</i>
+    <span>MERN</span><i>✦</i>
+    <span>ESP32 · IoT</span><i>✦</i>
+    <span>EDA</span><i>✦</i>
+    <span>Statistics</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ========================= ABOUT BENTO ========================= -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="kicker reveal">
+      <span class="kicker-num">01</span>
+      <span class="kicker-line"></span>
+      <span class="kicker-text">About</span>
+    </div>
+
+    <div class="bento">
+      <div class="bento-card big reveal">
+        <div class="bc-label">Who</div>
+        <h3>Final-year Computer Engineering student at <em>Indus University</em>, building data products with Python, SQL, ML and dashboards.</h3>
+        <p>I enjoy the moment when a chart stops being a chart and starts explaining <em>why</em> something is happening in a business — and what to do next.</p>
+      </div>
+
+      <div class="bento-card grad-card reveal">
+        <div class="bc-label">CGPA</div>
+        <div class="big-num counter" data-target="8.5">0</div>
+        <span>out of 10</span>
+      </div>
+
+      <div class="bento-card reveal">
+        <div class="bc-label">Based in</div>
+        <h4>Ahmedabad<br/><span class="muted">Gujarat, India</span></h4>
+        <div class="mini-map">
+          <svg viewBox="0 0 100 60" preserveAspectRatio="none">
+            <path d="M5 40 Q 25 5, 50 25 T 95 18" fill="none" stroke="currentColor" stroke-width=".7"/>
+            <circle cx="60" cy="22" r="2.4" fill="currentColor"/>
+            <circle cx="60" cy="22" r="6" fill="none" stroke="currentColor" opacity=".5"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="bento-card reveal">
+        <div class="bc-label">Languages</div>
+        <ul class="lang-list">
+          <li>English <small>Professional</small><div class="lvl"><i style="--w:90%"></i></div></li>
+          <li>Hindi <small>Native</small><div class="lvl"><i style="--w:100%"></i></div></li>
+          <li>Gujarati <small>Native</small><div class="lvl"><i style="--w:100%"></i></div></li>
+        </ul>
+      </div>
+
+      <div class="bento-card wide reveal">
+        <div class="bc-label">Currently</div>
+        <h4>Looking for a <span class="grad-text">data science / analytics</span> internship or entry-level role for 2026.</h4>
+        <a href="#contact" class="bc-cta" data-cursor="link">Talk to me →</a>
+      </div>
+
+      <div class="bento-card reveal accent-card">
+        <div class="bc-label">Mindset</div>
+        <p class="quote">"Numbers don't lie — but they don't speak either. My job is to make them speak."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= SKILLS ========================= -->
+<section id="skills" class="section">
+  <div class="container">
+    <div class="kicker reveal">
+      <span class="kicker-num">02</span>
+      <span class="kicker-line"></span>
+      <span class="kicker-text">Toolkit</span>
+    </div>
+
+    <h2 class="section-title reveal">A <span class="grad-text">stack</span> for the full data lifecycle.</h2>
+
+    <div class="skills-board">
+      <div class="skill-block reveal">
+        <div class="sb-head">
+          <span class="sb-num">/01</span>
+          <h3>Languages</h3>
+        </div>
+        <div class="sb-tags">
+          <span data-cursor="copy">Python</span>
+          <span data-cursor="copy">SQL</span>
+          <span data-cursor="copy">JavaScript</span>
+          <span data-cursor="copy">C</span>
+          <span data-cursor="copy">C++</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <div class="sb-head">
+          <span class="sb-num">/02</span>
+          <h3>Data Science · ML</h3>
+        </div>
+        <div class="sb-tags">
+          <span data-cursor="copy">Scikit-learn</span>
+          <span data-cursor="copy">Pandas</span>
+          <span data-cursor="copy">NumPy</span>
+          <span data-cursor="copy">Matplotlib</span>
+          <span data-cursor="copy">Seaborn</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <div class="sb-head">
+          <span class="sb-num">/03</span>
+          <h3>BI & Visualization</h3>
+        </div>
+        <div class="sb-tags">
+          <span data-cursor="copy">Power BI</span>
+          <span data-cursor="copy">DAX</span>
+          <span data-cursor="copy">Matplotlib</span>
+          <span data-cursor="copy">Seaborn</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <div class="sb-head">
+          <span class="sb-num">/04</span>
+          <h3>Statistics</h3>
+        </div>
+        <div class="sb-tags">
+          <span data-cursor="copy">Descriptive</span>
+          <span data-cursor="copy">Inferential</span>
+          <span data-cursor="copy">Probability</span>
+          <span data-cursor="copy">EDA</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <div class="sb-head">
+          <span class="sb-num">/05</span>
+          <h3>Databases</h3>
+        </div>
+        <div class="sb-tags">
+          <span data-cursor="copy">MySQL</span>
+          <span data-cursor="copy">MongoDB</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <div class="sb-head">
+          <span class="sb-num">/06</span>
+          <h3>Web & MERN</h3>
+        </div>
+        <div class="sb-tags">
+          <span data-cursor="copy">React.js</span>
+          <span data-cursor="copy">Node.js</span>
+          <span data-cursor="copy">Express.js</span>
+          <span data-cursor="copy">HTML</span>
+          <span data-cursor="copy">CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <div class="sb-head">
+          <span class="sb-num">/07</span>
+          <h3>Tooling</h3>
+        </div>
+        <div class="sb-tags">
+          <span data-cursor="copy">Git</span>
+          <span data-cursor="copy">GitHub</span>
+          <span data-cursor="copy">Jupyter</span>
+          <span data-cursor="copy">Colab</span>
+          <span data-cursor="copy">Postman</span>
+          <span data-cursor="copy">Vercel</span>
+          <span data-cursor="copy">Render</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <div class="sb-head">
+          <span class="sb-num">/08</span>
+          <h3>Soft skills</h3>
+        </div>
+        <div class="sb-tags">
+          <span>Analytical Thinking</span>
+          <span>Problem Solving</span>
+          <span>Communication</span>
+          <span>Teamwork</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= WORK ========================= -->
+<section id="work" class="section work-section">
+  <div class="container">
+    <div class="kicker reveal">
+      <span class="kicker-num">03</span>
+      <span class="kicker-line"></span>
+      <span class="kicker-text">Selected Work</span>
+    </div>
+
+    <h2 class="section-title reveal">Projects that shipped <span class="grad-text">real signals</span>.</h2>
+
+    <!-- Project 01 -->
+    <article class="work-row reveal">
+      <div class="work-num">01</div>
+      <div class="work-art" data-cursor="case">
+        <div class="art-bg art-1"></div>
+        <div class="art-fg">
+          <div class="chart-mock">
+            <div class="bar" style="--h:40%"></div>
+            <div class="bar" style="--h:65%"></div>
+            <div class="bar" style="--h:30%"></div>
+            <div class="bar" style="--h:80%"></div>
+            <div class="bar" style="--h:55%"></div>
+            <div class="bar" style="--h:90%"></div>
+            <div class="bar" style="--h:48%"></div>
+          </div>
+          <div class="art-meta">
+            <span>AQI · Live</span>
+            <span class="art-pulse"></span>
+          </div>
+        </div>
+      </div>
+      <div class="work-info">
+        <div class="work-tags">
+          <span>Python</span><span>Scikit-learn</span><span>IoT</span><span>ESP32</span>
+        </div>
+        <h3>AirSense — AQI Prediction & Monitoring</h3>
+        <p>End-to-end air-quality system. ESP32 sensors stream live PM2.5 / PM10 readings, a Scikit-learn model predicts AQI, and an HTML/CSS/JS dashboard surfaces both live and forecasted values.</p>
+        <ul class="work-bullets">
+          <li>Real-time wireless data collection with ESP32</li>
+          <li>ML-based AQI prediction with strong accuracy on field data</li>
+          <li>Custom dashboard for live + predicted monitoring</li>
+        </ul>
+        <span class="work-year">2025 – 2026</span>
+      </div>
+    </article>
+
+    <!-- Project 02 -->
+    <article class="work-row reverse reveal">
+      <div class="work-num">02</div>
+      <div class="work-art" data-cursor="case">
+        <div class="art-bg art-2"></div>
+        <div class="art-fg">
+          <div class="kpi-mock">
+            <div class="kpi"><b>+24%</b><span>Revenue</span></div>
+            <div class="kpi"><b>−12%</b><span>Attrition</span></div>
+            <div class="kpi"><b>10K</b><span>Rows</span></div>
+            <div class="kpi"><b>4</b><span>Regions</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="work-info">
+        <div class="work-tags">
+          <span>Power BI</span><span>SQL</span><span>MySQL</span><span>DAX</span>
+        </div>
+        <h3>Sales & HR Analytics Dashboard</h3>
+        <p>Interactive Power BI dashboard analyzing 10,000+ rows of sales and HR data with drill-through, slicers, and DAX-driven KPIs for stakeholders.</p>
+        <ul class="work-bullets">
+          <li>Advanced SQL — JOINs, CTEs, window functions in MySQL</li>
+          <li>DAX measures for revenue growth %, attrition rate, regional perf</li>
+          <li>Automated reporting workflow — stakeholder-ready visuals</li>
+        </ul>
+        <span class="work-year">2024 – 2025</span>
+      </div>
+    </article>
+
+    <!-- Project 03 -->
+    <article class="work-row reveal">
+      <div class="work-num">03</div>
+      <div class="work-art" data-cursor="case">
+        <div class="art-bg art-3"></div>
+        <div class="art-fg">
+          <div class="scatter-mock">
+            <svg viewBox="0 0 200 120">
+              <line x1="20" y1="100" x2="190" y2="100" stroke="currentColor" stroke-width=".5" opacity=".4"/>
+              <line x1="20" y1="100" x2="20"  y2="10"  stroke="currentColor" stroke-width=".5" opacity=".4"/>
+              <circle cx="40" cy="40"  r="3"/><circle cx="60" cy="55" r="4"/>
+              <circle cx="85" cy="70"  r="3"/><circle cx="100" cy="60" r="5"/>
+              <circle cx="120" cy="85" r="3"/><circle cx="140" cy="75" r="4"/>
+              <circle cx="160" cy="90" r="3"/><circle cx="175" cy="95" r="2"/>
+              <path d="M30 35 L 180 92" stroke="currentColor" stroke-width="1" opacity=".7" stroke-dasharray="3 3"/>
+            </svg>
+            <span class="corr">corr = −0.22</span>
+          </div>
+        </div>
+      </div>
+      <div class="work-info">
+        <div class="work-tags">
+          <span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span>
+        </div>
+        <h3>RetailSense — EDA on Superstore Sales</h3>
+        <p>End-to-end EDA on a 9,994-row, 21-column dataset. Surfaced the discount/profit relationship and Q4 seasonality, then translated findings into business recommendations.</p>
+        <ul class="work-bullets">
+          <li>Technology leads revenue (>₹8.36L); Furniture margins hurt by 17.4% avg discount</li>
+          <li>8+ visualizations proving −0.22 discount/profit correlation, Oct–Dec seasonality</li>
+          <li>7 actionable recommendations — published with notebooks & README</li>
+        </ul>
+        <span class="work-year">2024 – 2025</span>
+      </div>
+    </article>
+
+    <!-- Project 04 -->
+    <article class="work-row reverse reveal">
+      <div class="work-num">04</div>
+      <div class="work-art" data-cursor="case">
+        <div class="art-bg art-4"></div>
+        <div class="art-fg">
+          <div class="stack-mock">
+            <div class="stack-row">React</div>
+            <div class="stack-row">Express</div>
+            <div class="stack-row">MongoDB</div>
+            <div class="stack-row">OAuth 2.0</div>
+            <div class="stack-row">Cloudinary</div>
+          </div>
+        </div>
+      </div>
+      <div class="work-info">
+        <div class="work-tags">
+          <span>MERN</span><span>REST API</span><span>MongoDB</span><span>OAuth</span>
+        </div>
+        <h3>AgastyaHomes — Property Rental Platform</h3>
+        <p>Full-stack MERN property listing platform with secure auth, image management, and a scalable backend deployed to production.</p>
+        <ul class="work-bullets">
+          <li>Google OAuth 2.0 authentication, Cloudinary image management</li>
+          <li>RESTful APIs with Node.js + Express.js</li>
+          <li>Deployed on Render with MongoDB as backend database</li>
+        </ul>
+        <span class="work-year">2023 – 2024</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ========================= TIMELINE ========================= -->
+<section id="timeline" class="section">
+  <div class="container">
+    <div class="kicker reveal">
+      <span class="kicker-num">04</span>
+      <span class="kicker-line"></span>
+      <span class="kicker-text">Journey</span>
+    </div>
+
+    <h2 class="section-title reveal">From classroom to <span class="grad-text">production</span>.</h2>
+
+    <ol class="timeline">
+      <li class="t-row reveal">
+        <span class="t-when">2026 ·  Now</span>
+        <div class="t-body">
+          <h3>Open to Data Science / Analytics opportunities</h3>
+          <p>Wrapping up final year. Actively seeking full-time roles or internships where I can ship analyses and ML-driven products end to end.</p>
+        </div>
+      </li>
+      <li class="t-row reveal">
+        <span class="t-when">Mar 2026</span>
+        <div class="t-body">
+          <h3>Foundation of Mathematics in AI & ML</h3>
+          <p>Indus University · certification course strengthening linear algebra, probability, and optimization for ML.</p>
+        </div>
+      </li>
+      <li class="t-row reveal">
+        <span class="t-when">Jul 2024</span>
+        <div class="t-body">
+          <h3>Python & Machine Learning Intern</h3>
+          <p>Codsoft (Remote) — built ML models with Scikit-learn, applied preprocessing & feature engineering on real datasets, delivered classification & regression solutions. Awarded Internship Completion Certificate.</p>
+        </div>
+      </li>
+      <li class="t-row reveal">
+        <span class="t-when">Dec 2023</span>
+        <div class="t-body">
+          <h3>Upskilling Internship Course</h3>
+          <p>Indus University — structured certificate course on industry workflows and tooling.</p>
+        </div>
+      </li>
+      <li class="t-row reveal">
+        <span class="t-when">2022 – 2026</span>
+        <div class="t-body">
+          <h3>B.Tech in Computer Engineering · CGPA 8.5</h3>
+          <p>Indus University, Ahmedabad — DSA, DBMS, statistics, ML foundations, with a focus on data science and full-stack development.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========================= CONTACT ========================= -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="kicker reveal">
+      <span class="kicker-num">05</span>
+      <span class="kicker-line"></span>
+      <span class="kicker-text">Contact</span>
+    </div>
+
+    <h2 class="contact-headline reveal">
+      Let's build<br/>
+      something<br/>
+      <span class="grad-text">data-driven.</span>
+    </h2>
+
+    <a href="mailto:patwajay2101@gmail.com" class="contact-mailto reveal" data-cursor="email">
+      patwajay2101@gmail.com
+      <span class="ml-arrow">↗</span>
+    </a>
+
+    <div class="contact-grid">
+      <a href="tel:+919998880800" class="c-card reveal" data-cursor="link">
+        <span class="c-label">Phone</span>
+        <span class="c-val">+91 99988 80800</span>
+      </a>
+      <a href="https://github.com/jaypatwa21" target="_blank" rel="noopener" class="c-card reveal" data-cursor="link">
+        <span class="c-label">GitHub</span>
+        <span class="c-val">@jaypatwa21</span>
+      </a>
+      <a href="https://www.linkedin.com/in/jay-patwa-b625031b2/" target="_blank" rel="noopener" class="c-card reveal" data-cursor="link">
+        <span class="c-label">LinkedIn</span>
+        <span class="c-val">in/jay-patwa</span>
+      </a>
+      <div class="c-card reveal">
+        <span class="c-label">Location</span>
+        <span class="c-val">Ahmedabad, IN</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="big-name" aria-hidden="true">JAY&nbsp;PATWA</div>
+
+  <footer class="footer">
+    <div>© <span id="yr"></span> Jay Patwa — Crafted with curiosity in Ahmedabad.</div>
+    <div class="footer-right">
+      <span>EN · HI · GU</span>
+      <a href="#home" data-cursor="up">Back to top ↑</a>
+    </div>
+  </footer>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
