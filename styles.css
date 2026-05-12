@@ -1216,7 +1216,10 @@ button{ font:inherit; }
 
 /* ==========================================================
    Responsive
+   Breakpoints: 1100 · 880 · 640 · 440
 ========================================================== */
+
+/* ===== Tablet landscape (≤ 1100px) ===== */
 @media (max-width: 1100px){
   .bento{ grid-template-columns: repeat(2, 1fr); }
   .bento-card.big{ grid-column: span 2; grid-row: auto; }
@@ -1225,47 +1228,241 @@ button{ font:inherit; }
   .skill-block:nth-child(4n){ border-right: 1px solid var(--line); }
   .skill-block:nth-child(2n){ border-right: none; }
   .skill-block:nth-last-child(-n+2){ border-bottom: none; }
+  .work-row, .work-row.reverse{ gap: 40px; }
+  .section-title{ font-size: clamp(2.2rem, 5vw, 4rem); margin-bottom: 50px; }
 }
 
+/* ===== Tablet portrait / large mobile (≤ 880px) ===== */
 @media (max-width: 880px){
   body{ cursor:auto; }
   .cursor-dot, .cursor-ring{ display:none; }
-  .topbar{ padding: 14px 18px; font-size: .68rem; }
+
+  /* Topbar — clean for mobile */
+  .topbar{
+    padding: 12px 16px;
+    font-size: .68rem;
+    background: rgba(10,10,12,.85);
+  }
   .topbar-meta{ display:none; }
   .status-text{ display:none; }
-  .hero{ padding: 120px 20px 60px; }
-  .hero-grid{ grid-template-columns: 1fr; gap: 60px; }
+  .brand-text small{ display:none; }
+  .brand-text{ font-size: .85rem; }
+  .brand-mark{ width:12px; height:12px; }
+
+  /* Section paddings */
+  .section{ padding: 90px 0; }
+  .kicker{ margin-bottom: 26px; gap: 10px; }
+  .kicker-line{ flex: 0 0 36px; }
+  .section-title{
+    font-size: clamp(2rem, 7vw, 3.4rem);
+    margin-bottom: 40px;
+    letter-spacing: -.03em;
+  }
+
+  /* Hero */
+  .hero{ padding: 100px 20px 90px; min-height: auto; }
+  .hero-grid{ grid-template-columns: 1fr; gap: 50px; }
+  .hero-meta{ gap: 12px; margin-bottom: 24px; }
+  .meta-pill{ font-size: .68rem; padding: 5px 11px; }
+  .meta-line{ font-size: .68rem; }
+  .hero-headline{
+    font-size: clamp(2.4rem, 9vw, 3.8rem);
+    line-height: 1;
+    margin-bottom: 26px;
+  }
+  .hero-sub{ font-size: 1rem; margin-bottom: 32px; }
+  .hero-actions{ gap: 18px; margin-bottom: 44px; }
+  .btn-magnetic{ padding: 16px 26px 16px 24px; font-size: .92rem; }
+  .hero-stats{ gap: 28px 36px; padding-top: 22px; }
+  .hero-stats b{ font-size: 1.4rem; }
+  .hero-stats span{ font-size: .65rem; }
   .hero-right{ align-items:center; }
-  .portrait{ max-width: 360px; }
+  .portrait{ max-width: 340px; width: 100%; }
+  .portrait-frame{ border-radius: 20px; }
+
+  /* Portrait badges — pull inside the frame so they don't overflow */
+  .b-py { top: 4%;  left: 4%;  }
+  .b-ml { top: 4%;  right: 4%; }
+  .b-bi { bottom: 18%; left: 4%; }
+  .b-sql{ bottom: 18%; right: 4%; }
+  .badge{ font-size: .65rem; padding: 5px 10px; }
+
+  .quote-card{
+    font-size: .98rem;
+    padding: 18px 20px 18px 48px;
+  }
+  .qmark{ font-size: 3rem; top: 8px; left: 18px; }
+
   .hero-foot{ display:none; }
+
+  /* Marquee */
+  .marquee{ padding: 18px 0; }
+  .marquee-track{ gap: 24px; }
+  .marquee-track span{ font-size: 1.05rem; }
+  .marquee-track i{ font-size: 1rem; }
+
+  /* Bento */
+  .bento{ gap: 14px; }
+  .bento-card{ padding: 22px; border-radius: 18px; }
+  .bento-card.big{ padding: 26px; }
+  .bento-card.big h3{ font-size: 1.2rem; }
+  .big-num{ font-size: clamp(2.6rem, 10vw, 4rem); }
+
+  /* Work */
   .work-row, .work-row.reverse{
-    grid-template-columns: 1fr;
-    gap: 30px;
+    grid-template-columns: 36px 1fr;
+    grid-template-rows: auto auto;
+    gap: 14px 18px;
     padding: 50px 0;
   }
+  .work-num{ grid-column: 1; grid-row: 1; padding-top: 6px; font-size: .8rem; }
+  .work-art{
+    grid-column: 1 / -1;
+    grid-row: 2;
+    aspect-ratio: 16/10;
+    order: 0;
+  }
+  .work-info{ grid-column: 2; grid-row: 1; }
   .work-row.reverse .work-art{ order:initial; }
   .work-row.reverse .work-info{ order:initial; }
   .work-row.reverse .work-num{ order:initial; }
-  .t-row{ grid-template-columns: 1fr; gap: 8px; }
+  .work-info h3{ font-size: clamp(1.4rem, 4.6vw, 1.8rem); margin-bottom: 12px; }
+  .work-info p{ font-size: .95rem; margin-bottom: 14px; }
+  .work-bullets li{ font-size: .88rem; }
+  .chart-mock{ height: 120px; }
+  .chart-mock .bar{ width: 16px; }
+
+  /* Timeline */
+  .t-row{ grid-template-columns: 1fr; gap: 8px; padding: 26px 0; }
+  .t-body h3{ font-size: 1.2rem; }
+  .t-row:hover .t-body h3{ transform: none; }
+
+  /* Contact */
+  .contact-headline{
+    font-size: clamp(2.4rem, 11vw, 4.4rem);
+    margin: 22px 0 36px;
+  }
+  .contact-mailto{
+    font-size: clamp(1.1rem, 5vw, 1.8rem);
+    padding: 22px 0;
+    gap: 10px;
+  }
   .contact-grid{ grid-template-columns: repeat(2, 1fr); }
+  .c-card{ padding: 22px 0 22px 16px; }
   .c-card:nth-child(2n){ border-right:none; }
-  .dock{ bottom: 14px; padding: 6px; }
-  .dock-item{ width:38px; height:38px; }
+  .c-val{ font-size: .95rem; }
+  .big-name{
+    font-size: clamp(4rem, 26vw, 12rem);
+    margin: 50px 0 -3vw;
+  }
+  .footer{
+    flex-direction: column;
+    gap: 10px;
+    text-align:center;
+    padding: 22px 22px calc(86px + env(safe-area-inset-bottom));
+    font-size: .68rem;
+  }
+
+  /* Dock — bigger touch targets + iOS safe area */
+  .dock{
+    bottom: max(14px, env(safe-area-inset-bottom));
+    padding: 6px;
+    gap: 4px;
+    border-radius: 999px;
+  }
+  .dock-item{ width: 44px; height: 44px; } /* iOS touch-target min */
+  .dock-item svg{ width: 18px; height: 18px; }
+  .dock-item::after{ display:none; } /* tooltips off on touch */
 }
 
-@media (max-width: 520px){
-  .section{ padding: 90px 0; }
+/* ===== Small mobile (≤ 640px) ===== */
+@media (max-width: 640px){
+  .section{ padding: 80px 0; }
   .container{ width: 92vw; }
+
+  /* Hero */
+  .hero{ padding: 90px 16px 90px; }
+  .hero-headline{ font-size: clamp(2.2rem, 10vw, 3rem); }
+  .hero-sub{ max-width: none; }
+  .hero-actions{ flex-direction: column; align-items: flex-start; gap: 16px; }
+  .btn-magnetic{ width: 100%; justify-content: center; }
+  .portrait{ max-width: 300px; }
+  .quote-card{ max-width: 100%; }
+
+  /* Skills */
   .skills-board{ grid-template-columns: 1fr; }
-  .skill-block{ border-right: none !important; }
+  .skill-block{ border-right: none !important; padding: 22px; }
   .skill-block:last-child{ border-bottom:none; }
-  .hero-stats{ gap: 26px; }
+
+  /* Bento */
   .bento{ grid-template-columns: 1fr; }
-  .bento-card.big, .bento-card.wide{ grid-column: span 1; }
+  .bento-card.big, .bento-card.wide{ grid-column: span 1; padding: 22px; }
+
+  /* Work mocks shrink a bit */
+  .work-art{ padding: 0; }
+  .art-fg{ padding: 20px; }
+  .kpi-mock{ max-width: 100%; gap: 8px; }
+  .kpi{ padding: 10px; }
+  .kpi b{ font-size: 1.2rem; }
+  .stack-mock{ max-width: 100%; }
+  .stack-row{ font-size: .78rem; padding: 8px 12px; }
+
+  /* Contact */
   .contact-grid{ grid-template-columns: 1fr; }
-  .c-card{ border-right:none; }
+  .c-card{ border-right:none; padding-left: 0; }
+  .ml-arrow{ font-size: 1.4rem; }
+
+  /* Big name — keep dramatic but fit */
+  .big-name{ font-size: clamp(3.4rem, 28vw, 9rem); }
 }
 
+/* ===== Very small mobile (≤ 440px) — narrow Androids / older iPhones ===== */
+@media (max-width: 440px){
+  .topbar{ padding: 10px 12px; }
+  .brand{ gap: 8px; }
+  .status{ gap: 6px; }
+  .hero{ padding: 84px 14px 80px; }
+  .hero-headline{ font-size: clamp(2rem, 11vw, 2.6rem); letter-spacing:-.04em; }
+  .hero-sub{ font-size: .95rem; }
+  .hero-stats{ gap: 18px 28px; }
+  .hero-stats > div{ min-width: 70px; }
+  .portrait{ max-width: 260px; }
+  .badge{ font-size: .6rem; padding: 4px 8px; }
+  .meta-pill{ font-size: .62rem; padding: 4px 9px; }
+
+  .marquee-track span{ font-size: .95rem; }
+  .marquee-track{ gap: 18px; }
+
+  .kicker{ font-size: .7rem; }
+  .section-title{ font-size: clamp(1.8rem, 8vw, 2.6rem); }
+
+  .bento-card{ padding: 18px; }
+  .skill-block{ padding: 18px; }
+  .sb-tags span{ font-size: .68rem; padding: 4px 9px; }
+  .sb-head h3{ font-size: .92rem; }
+
+  .work-row, .work-row.reverse{
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 40px 0;
+  }
+  .work-num{ grid-column: 1; grid-row: 1; padding-top: 0; }
+  .work-info{ grid-column: 1; grid-row: 2; }
+  .work-art{ grid-column: 1; grid-row: 3; aspect-ratio: 16/11; }
+  .work-info h3{ font-size: 1.35rem; }
+
+  .contact-headline{ font-size: clamp(2rem, 12vw, 2.8rem); }
+  .contact-mailto{ font-size: clamp(1rem, 5.5vw, 1.4rem); }
+  .footer-right{ flex-direction:column; gap: 8px; }
+
+  .dock{ gap: 2px; padding: 5px; }
+  .dock-item{ width: 40px; height: 40px; }
+  .dock-item svg{ width: 16px; height: 16px; }
+}
+
+/* ==========================================================
+   Motion preference
+========================================================== */
 @media (prefers-reduced-motion: reduce){
   *, *::before, *::after{
     animation-duration: .01ms !important;
