@@ -51,23 +51,21 @@ No npm, no bundler, no dependencies.
 ├── profile.jpg        # portrait
 ├── Jay_CV.pdf         # downloadable résumé
 ├── v2/                # experiment — "Data Lab" (WebGL + interactive terminal)
-├── v3/                # experiment — "JayOS" (a portfolio operating system)
 └── README.md
 ```
 
 ---
 
-## 🧪 Experiments
+## 🧪 Experiment
 
-Two extra builds explore how far a vanilla-JS portfolio can go — each fully
+An extra build exploring how far a vanilla-JS portfolio can go — fully
 self-contained, no dependencies:
 
 | Build | Concept | Highlights |
 |---|---|---|
 | [`/v2`](v2/) — **Data Lab** | Cinematic single-page | Pure WebGL shader background, terminal boot, name scramble, horizontal-scroll showcase, a fully interactive command terminal, Konami → Matrix rain |
-| [`/v3`](v3/) — **JayOS** | A portfolio *operating system* | Boot + login, draggable windows, dock, Spotlight search (Ctrl+K), and a **live ML Lab** where you train a k-NN classifier and watch the decision boundary update in real time |
 
-Live: [`/v2`](https://jaypatwa21.github.io/v2/) · [`/v3`](https://jaypatwa21.github.io/v3/)
+Live: [`/v2`](https://jaypatwa21.github.io/v2/)
 
 ---
 

@@ -12,3 +12,6 @@ desktop.ini
 
 # Logs
 *.log
+
+# Local-only experiment (test build, not deployed)
+v3/
