@@ -83,7 +83,7 @@ python -m http.server 8080
 
 ## 🎓 About Me
 
-Final-year B.Tech Computer Engineering student at **Indus University, Ahmedabad** (CGPA 8.5). Open to full-time roles or internships in Data Science / Analytics where I can ship analyses and ML-driven products end to end.
+Final-year B.Tech Computer Engineering student at **Indus University, Ahmedabad** (CGPA 8.6). Open to full-time roles or internships in Data Science / Analytics where I can ship analyses and ML-driven products end to end.
 
 **Featured projects covered on the site:**
 1. **AirSense** — AQI prediction & monitoring with ESP32 IoT + Scikit-learn
