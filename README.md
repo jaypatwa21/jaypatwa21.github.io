@@ -50,22 +50,8 @@ No npm, no bundler, no dependencies.
 ├── script.js          # cursor, preloader, magnetic, scroll, clock, counters
 ├── profile.jpg        # portrait
 ├── Jay_CV.pdf         # downloadable résumé
-├── v2/                # experiment — "Data Lab" (WebGL + interactive terminal)
 └── README.md
 ```
-
----
-
-## 🧪 Experiment
-
-An extra build exploring how far a vanilla-JS portfolio can go — fully
-self-contained, no dependencies:
-
-| Build | Concept | Highlights |
-|---|---|---|
-| [`/v2`](v2/) — **Data Lab** | Cinematic single-page | Pure WebGL shader background, terminal boot, name scramble, horizontal-scroll showcase, a fully interactive command terminal, Konami → Matrix rain |
-
-Live: [`/v2`](https://jaypatwa21.github.io/v2/)
 
 ---
 
