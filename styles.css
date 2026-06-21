@@ -545,6 +545,65 @@ button{ font:inherit; }
 .link-underline:hover{ color: var(--ink); }
 .link-underline:hover::after{ transform: scaleX(1); }
 
+/* Highlighted résumé button */
+.btn-resume{
+  position:relative;
+  display:inline-flex; align-items:center; gap: 11px;
+  padding: 16px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: .95rem;
+  letter-spacing: -.01em;
+  color: var(--acc);
+  border: 1px solid rgba(182,255,58,.5);
+  background: rgba(182,255,58,.07);
+  isolation: isolate;
+  overflow: hidden;
+  transition: color .35s var(--ease), border-color .35s var(--ease),
+              transform .35s var(--ease), box-shadow .35s var(--ease);
+  animation: resume-pulse 2.8s ease-in-out 2.6s infinite;
+}
+.btn-resume::before{
+  content:''; position:absolute; inset:0; z-index:-1;
+  background: var(--acc);
+  border-radius: 999px;
+  transform: translateY(101%);
+  transition: transform .45s var(--ease-out);
+}
+.btn-resume svg{
+  width: 17px; height: 17px;
+  transition: transform .35s var(--ease-out);
+}
+.resume-tag{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .6rem; font-weight: 700;
+  letter-spacing: .1em;
+  padding: 3px 7px; border-radius: 6px;
+  background: rgba(182,255,58,.16);
+  color: var(--acc);
+  transition: background .35s var(--ease), color .35s var(--ease);
+}
+.btn-resume:hover{
+  color: var(--bg);
+  border-color: var(--acc);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 42px -12px rgba(182,255,58,.55);
+  animation: none;
+}
+.btn-resume:hover::before{ transform: translateY(0); }
+.btn-resume:hover svg{ transform: translateY(2px); }
+.btn-resume:hover .resume-tag{
+  background: rgba(10,10,12,.22);
+  color: var(--bg);
+}
+@keyframes resume-pulse{
+  0%, 100%{ box-shadow: 0 0 0 0 rgba(182,255,58,0); }
+  50%{ box-shadow: 0 0 24px -2px rgba(182,255,58,.4); }
+}
+@media (prefers-reduced-motion: reduce){
+  .btn-resume{ animation: none; }
+}
+
 .hero-stats{
   display:flex; gap: 48px;
   border-top: 1px solid var(--line);
@@ -1386,6 +1445,7 @@ button{ font:inherit; }
   .hero-sub{ max-width: none; }
   .hero-actions{ flex-direction: column; align-items: flex-start; gap: 16px; }
   .btn-magnetic{ width: 100%; justify-content: center; }
+  .btn-resume{ width: 100%; justify-content: center; }
   .portrait{ max-width: 300px; }
   .quote-card{ max-width: 100%; }
 
